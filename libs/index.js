@@ -16,7 +16,7 @@ var PluginError = gutil.PluginError;
  */
 function getMetadata(file, metadata) {
   var meta = {
-    contentType: mime.lookup(file.path)
+    contentType: `${mime.lookup(file.path)}; charset=utf-8`
   }
 
   // Check if it's gziped
